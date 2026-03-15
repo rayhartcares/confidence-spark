@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Confidence Spark — A Courage and Confidence Builder for Growing Minds. Brave Feelings Lab." />
+  <title>Confidence Spark | Brave Feelings Lab</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- =============================================
+       PASSWORD SCREEN
+  ============================================= -->
+  <div id="password-screen">
+    <div class="password-card">
+      <div class="password-logo">Brave Feelings Lab</div>
+      <div class="password-subtitle">Premium Program</div>
+      <div class="password-spark">⚡</div>
+      <h2>Confidence Spark</h2>
+      <p>A Courage and Confidence Builder for Growing Minds</p>
+      <div class="password-input-wrap">
+        <input
+          type="password"
+          id="password-input"
+          placeholder="Enter program password"
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+        />
+      </div>
+      <div id="password-error"></div>
+      <button class="btn-enter" id="password-submit">Enter Program →</button>
+    </div>
+  </div>
+
+  <!-- =============================================
+       MAIN APP
+  ============================================= -->
+  <div id="app">
+
+    <!-- Header -->
+    <header id="app-header">
+      <div class="header-brand">Confidence Spark ⚡</div>
+
+      <div class="header-center">
+        <button id="menu-toggle" class="menu-toggle" aria-label="Open program menu">☰</button>
+      </div>
+
+      <div class="header-progress-wrap">
+        <span class="progress-label">Page 1 of 30</span>
+        <div class="progress-bar-outer">
+          <div class="progress-bar-inner"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Menu Overlay & Drawer -->
+    <div id="program-menu-overlay" class="program-menu-overlay"></div>
+    <aside id="program-menu" class="program-menu" aria-hidden="true">
+      <div class="program-menu-header">
+        <h3>Program Menu</h3>
+        <button id="menu-close" class="menu-close" aria-label="Close menu">✕</button>
+      </div>
+
+      <div class="program-menu-section">
+        <label for="page-jump-select" class="program-menu-label">Go to Page</label>
+        <select id="page-jump-select" class="page-jump-select">
+          <option value="">Select a page...</option>
+        </select>
+        <button id="page-jump-btn" class="program-menu-btn primary">Go</button>
+      </div>
+
+      <div class="program-menu-section journey-section">
+        <div class="program-menu-label">Confidence Spark Journey</div>
+        <div id="journey-roadmap" class="journey-roadmap"></div>
+      </div>
+
+      <div class="program-menu-section">
+        <button id="restart-btn" class="program-menu-btn">Restart Program</button>
+        <button id="logoff-btn" class="program-menu-btn logoff">Log Off</button>
+        <button id="exit-btn" class="program-menu-btn danger">Exit &amp; Reset Progress</button>
+      </div>
+    </aside>
+
+    <!-- Page Content -->
+    <main id="page-container"></main>
+
+    <!-- Spark success toast (inside #app so it doesn't show before login) -->
+    <div id="spark-success" class="spark-success">⭐ Nice progress!</div>
+
+  </div><!-- /app -->
+
+  <script src="script.js"></script>
+</body>
+</html>
